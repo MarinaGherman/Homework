@@ -32,16 +32,20 @@ function setClock(id, endTime) {
             hours.textContent = t.hours;
             minutes.textContent = t.minutes;
             seconds.textContent = t.seconds;
-            
+
             function addZero(num){
                 if(num <= 9) {
                     return '0' + num;
                 } else return num;
             };
 
-    hours.textContent = addZero(t.hours);
-    minutes.textContent = addZero(t.minutes);
-    seconds.textContent = addZero(t.seconds);
+            hours.innerHTML = ("0" + t.hours).slice(-2);
+            minutes.innerHTML = ("0" + t.minutes).slice(-2);
+            seconds.innerHTML = ("0" + t.seconds).slice(-2);
+            //or
+            //hours.textContent = addZero(t.hours);
+            //minutes.textContent = addZero(t.minutes);
+            //seconds.textContent = addZero(t.seconds);
 
             if (t.total <= 0) {
                 clearInterval(timeInterval);
