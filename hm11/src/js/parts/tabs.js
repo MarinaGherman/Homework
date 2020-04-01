@@ -36,4 +36,4 @@ console.log(tabContent[0]);
     });
 }
 
-    module.exports = tabs;
+module.exports = tabs;
